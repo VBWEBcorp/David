@@ -8,8 +8,6 @@ import { HeroSection } from '@/components/sections/hero-section'
 import { PartnersSection } from '@/components/sections/partners-section'
 import { ServicesPreview } from '@/components/sections/services-preview'
 import { StorySection } from '@/components/sections/story-section'
-import { TestimonialsSection } from '@/components/sections/testimonials-section'
-import { ValuesMarquee } from '@/components/sections/values-marquee'
 import {
   localBusinessJsonLd,
   organizationJsonLd,
@@ -45,10 +43,8 @@ export default function HomePage() {
       <GalleryCarousel />
       <EngagementsSection />
       <PartnersSection />
-      <TestimonialsSection />
       <CtaSection />
       <FaqSection />
-      <ValuesMarquee />
     </>
   )
 }
