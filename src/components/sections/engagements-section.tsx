@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Clock, Shield, Award, FileCheck, Sparkles } from 'lucide-react'
+import { Clock, Shield, Award, FileCheck, Headphones, Sparkles } from 'lucide-react'
 
 import { SectionTitle } from '@/components/ui/section-title'
 
@@ -13,6 +13,7 @@ const engagements = [
   { icon: Shield, title: 'Respect des normes', description: 'Nous travaillons dans le respect de la série de normes NF C 15-100.' },
   { icon: Award, title: 'Garantie décennale', description: 'Pour votre sécurité, Göz Elec a souscrit à une garantie décennale.' },
   { icon: Clock, title: 'Respect des délais', description: 'Nous vous rendons un chantier propre, sécurisé et dans le respect des délais convenus.' },
+  { icon: Headphones, title: 'Accompagnement', description: 'Un interlocuteur unique qui vous conseille et vous accompagne de A à Z.' },
 ]
 
 export function EngagementsSection() {
