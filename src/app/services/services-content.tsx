@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import {
-  BarChart3, Code, Globe, Megaphone, Palette, Search, ShieldCheck, Smartphone,
+  Building2, Home, Lightbulb, Plug, Shield, Sun, Wind, Wrench, Zap,
 } from 'lucide-react'
 
 import { CtaSection } from '@/components/sections/cta-section'
@@ -11,24 +11,25 @@ import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/ca
 import { useContent } from '@/hooks/use-content'
 
 const ease = [0.22, 1, 0.36, 1] as const
-const defaultIcons = [Globe, Smartphone, Search, Palette, Megaphone, Code, ShieldCheck, BarChart3]
+const defaultIcons = [Wrench, Home, Zap, Wind, Lightbulb, Building2, Shield, Sun, Plug]
 
 const defaults = {
   hero: {
-    eyebrow: 'Services',
-    title: "Tout ce qu'il faut pour réussir en ligne",
-    description: "Des prestations complètes, de la conception à l'accompagnement continu, adaptées à toutes les tailles d'entreprise.",
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80',
+    eyebrow: 'Nos prestations',
+    title: "Tous les services électriques dont vous avez besoin",
+    description: "De la rénovation à l'installation neuve, en passant par le dépannage d'urgence et l'installation de VMC. Göz Elec intervient à Rennes et dans un rayon de 30 km.",
+    image: '/images/goez-10.jpg',
   },
   services: [
-    { title: 'Création de site vitrine', description: 'Un site moderne, rapide et responsive qui présente clairement votre activité et inspire confiance à vos visiteurs.' },
-    { title: 'Application web', description: 'Outils métier, plateformes de réservation, espaces clients : des applications pensées pour simplifier votre quotidien.' },
-    { title: 'Référencement naturel (SEO)', description: 'Optimisation technique, contenu stratégique et suivi de positionnement pour gagner en visibilité sur Google.' },
-    { title: 'Identité visuelle', description: 'Logo, charte graphique, supports de communication : une image cohérente qui vous ressemble.' },
-    { title: 'Communication digitale', description: 'Stratégie de contenu, réseaux sociaux et campagnes pour développer votre audience en ligne.' },
-    { title: 'Développement sur mesure', description: 'Intégrations, automatisations, API : des solutions techniques taillées pour vos besoins spécifiques.' },
-    { title: 'Maintenance & sécurité', description: 'Mises à jour, sauvegardes, monitoring et corrections pour un site toujours performant et sécurisé.' },
-    { title: 'Analyse & reporting', description: 'Tableaux de bord clairs pour suivre vos performances, comprendre vos visiteurs et ajuster votre stratégie.' },
+    { title: 'Rénovation électrique', description: "Remise aux normes du logement : mise en sécurité ou remplacement du tableau électrique et du câblage, mise à la terre des équipements, raccordement des nouveaux appareils." },
+    { title: 'Installation neuve', description: "Installation initiale du réseau électrique dans les logements neufs. Mise en place du tableau électrique, pose des prises, interrupteurs et équipements dans le respect des normes NF C 15-100." },
+    { title: 'Dépannage 24h/24', description: "Intervention rapide en semaine comme le week-end pour vos pannes électriques. Nous identifions la cause de la panne et apportons la solution adaptée, de jour comme de nuit." },
+    { title: 'Installation VMC', description: "Installation de VMC simple ou double flux, hygroréglable ou non. Nous nous adaptons à vos préférences et assurons la pose et la mise en service, en neuf comme en rénovation." },
+    { title: 'Éclairage intérieur', description: "Installation de spots, luminaires, éclairages LED, variateurs et solutions d'ambiance pour tous vos espaces intérieurs." },
+    { title: 'Électricité commerciale', description: "Installation et maintenance électrique pour commerces, restaurants, fromageries, salons de coiffure, boulangeries et locaux professionnels." },
+    { title: 'Mise en sécurité', description: "Diagnostics électriques, mise en conformité NF C 15-100, installation de dispositifs de protection, mise à la terre et parafoudres." },
+    { title: 'Éclairage extérieur', description: "Mise en lumière de façades, jardins, terrasses. Installation de détecteurs de mouvement, appliques murales et bornes lumineuses." },
+    { title: 'Domotique & connecté', description: "Solutions domotiques, prises connectées, volets roulants électriques, gestion intelligente de l'énergie pour votre confort." },
   ],
 }
 
@@ -49,9 +50,9 @@ export function ServicesContent() {
 
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s: any, i: number) => {
-              const Icon = defaultIcons[i] ?? Globe
+              const Icon = defaultIcons[i] ?? Zap
               return (
                 <motion.div
                   key={s.title || i}

@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import { Logo } from '@/components/layout/logo'
 import { ThemeToggle } from '@/components/theme/theme-toggle'
@@ -18,45 +18,17 @@ interface NavLink {
 
 const staticLinks: NavLink[] = [
   { to: '/', label: 'Accueil' },
-  { to: '/a-propos', label: 'À propos' },
+  { to: '/a-propos', label: 'A propos' },
   { to: '/services', label: 'Services' },
+  { to: '/gallery', label: 'Galerie' },
+  { to: '/blog', label: 'Blog' },
   { to: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
-  const [links, setLinks] = useState<NavLink[]>(staticLinks)
+  const links = staticLinks
   const pathname = usePathname()
-
-  // Vérifier si la galerie et le blog sont activés
-  useEffect(() => {
-    const checkFeatures = async () => {
-      try {
-        const [galleryRes, blogRes] = await Promise.all([
-          fetch('/api/gallery/settings'),
-          fetch('/api/blog/settings'),
-        ])
-        const gallery = await galleryRes.json()
-        const blog = await blogRes.json()
-
-        const dynamicLinks: NavLink[] = [
-          { to: '/', label: 'Accueil' },
-          { to: '/a-propos', label: 'À propos' },
-          { to: '/services', label: 'Services' },
-        ]
-
-        if (gallery.enabled) dynamicLinks.push({ to: '/gallery', label: 'Galerie' })
-        if (blog.enabled) dynamicLinks.push({ to: '/blog', label: 'Blog' })
-
-        dynamicLinks.push({ to: '/contact', label: 'Contact' })
-        setLinks(dynamicLinks)
-      } catch (error) {
-        console.error('Failed to check features:', error)
-      }
-    }
-
-    checkFeatures()
-  }, [])
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/75 backdrop-blur-xl supports-[backdrop-filter]:bg-background/55">
@@ -86,7 +58,7 @@ export function Navbar() {
         <div className="hidden items-center gap-2 md:flex">
           <ThemeToggle />
           <Button size="sm" asChild>
-            <Link href="/contact">Nous contacter</Link>
+            <Link href="/contact">Devis gratuit</Link>
           </Button>
         </div>
 
@@ -136,7 +108,7 @@ export function Navbar() {
               <div className="mt-2 border-t border-border/60 pt-4">
                 <Button className="w-full" asChild>
                   <Link href="/contact" onClick={() => setOpen(false)}>
-                    Nous contacter
+                    Devis gratuit
                   </Link>
                 </Button>
               </div>

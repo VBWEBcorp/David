@@ -6,22 +6,22 @@ import { SectionTitle } from '@/components/ui/section-title'
 import { useContent } from '@/hooks/use-content'
 
 const defaultTestimonials = [
-  { name: 'Marie D.', company: 'Boulangerie Le Fournil', text: "Depuis le nouveau site, je reçois 3 fois plus d'appels. Les clients nous trouvent enfin sur Google.", stars: 5 },
-  { name: 'Thomas L.', company: 'Cabinet Conseil TLR', text: 'Un travail soigné, un site clair et professionnel. Mes prospects comprennent immédiatement ce que je propose.', stars: 5 },
-  { name: 'Camille B.', company: 'Atelier Camille', text: "Le site reflète parfaitement l'univers de ma marque. J'ai gagné en crédibilité auprès de mes clients.", stars: 5 },
-  { name: 'Laurent M.', company: 'LM Rénovation', text: 'En trois mois, mon chiffre a augmenté de 40 %. Le site et le SEO font vraiment la différence.', stars: 5 },
-  { name: 'Nadia K.', company: 'Agence NovaTour', text: "Un accompagnement au top, des délais respectés et un résultat qui dépasse mes attentes.", stars: 5 },
-  { name: 'Sophie R.', company: 'Studio Pilates Zen', text: "L'équipe a su capter l'ambiance de mon studio. Les réservations ont décollé.", stars: 5 },
-  { name: 'Pierre V.', company: 'Transports Vallée', text: "Un investissement rentabilisé en quelques semaines. Des contacts qualifiés chaque jour.", stars: 5 },
-  { name: 'Julie A.', company: "Les Jardins d'Alice", text: "Ils ont transformé notre présence en ligne. Le site est magnifique et nos ventes ont triplé.", stars: 5 },
-  { name: 'Franck G.', company: 'Studio FG', text: "Design épuré, navigation fluide, exactement ce que je voulais pour présenter mes projets.", stars: 4 },
-  { name: 'Émilie T.', company: 'Clinique Vétérinaire du Parc', text: "Nos clients trouvent toutes les infos facilement. La prise de rendez-vous a changé notre quotidien.", stars: 5 },
+  { name: 'Marie D.', company: 'Particulier - Rennes', text: "Goz Elec a entierement refait l'electricite de notre maison. Travail impeccable, propre et dans les delais. Je recommande vivement !", stars: 5 },
+  { name: 'Thomas L.', company: 'Restaurant Le Comptoir', text: "Installation electrique complete de notre restaurant. L'equipe a ete tres professionnelle et a su s'adapter a nos contraintes horaires.", stars: 5 },
+  { name: 'Sophie R.', company: 'Salon de coiffure Elegance', text: "Eclairage sur mesure pour mon salon. Le resultat est magnifique et mes clientes adorent l'ambiance. Merci Goz Elec !", stars: 5 },
+  { name: 'Laurent M.', company: 'Particulier - Cesson-Sevigne', text: "Depannage rapide un dimanche soir. En moins d'une heure, le probleme etait regle. Tres reactif et competent.", stars: 5 },
+  { name: 'Nadia K.', company: 'Fromagerie Saint-Michel', text: "Installation electrique de notre boutique, eclairage et refrigeration. Un travail de pro, on est ravis du resultat.", stars: 5 },
+  { name: 'Pierre V.', company: 'Particulier - Saint-Gregoire', text: "Mise aux normes de notre tableau electrique. Explications claires, devis respecte. Un electricien serieux.", stars: 5 },
+  { name: 'Julie A.', company: 'Boulangerie Les Bles d\'Or', text: "Goz Elec a realise toute l'installation de notre boulangerie. Eclairage parfait et respect des normes. Top !", stars: 5 },
+  { name: 'Franck G.', company: 'Particulier - Bruz', text: "Installation domotique et eclairage exterieur. Le rendu est superbe et tout fonctionne parfaitement.", stars: 5 },
+  { name: 'Camille B.', company: 'Cabinet medical', text: "Renovation electrique de notre cabinet. Intervention propre, rapide et professionnelle. Tres satisfaite.", stars: 5 },
+  { name: 'Emilie T.', company: 'Particulier - Pace', text: "Excellente prestation pour l'installation de notre cuisine. Prises, eclairage, tout est parfait.", stars: 5 },
 ]
 
 const defaults = {
-  eyebrow: 'Témoignages',
+  eyebrow: 'Temoignages',
   title: 'Ils nous font confiance',
-  description: 'Des entreprises de tous horizons qui ont gagné en visibilité et en crédibilité.',
+  description: 'Particuliers et professionnels a Rennes temoignent de la qualite de nos interventions.',
   testimonials: defaultTestimonials,
 }
 
@@ -57,7 +57,7 @@ function TestimonialCard({
       </div>
       <blockquote className="mt-3 flex-1">
         <p className="text-[13px] leading-relaxed text-foreground/85">
-          "{testimonial.text}"
+          &ldquo;{testimonial.text}&rdquo;
         </p>
       </blockquote>
       <figcaption className="mt-3 flex items-center gap-2.5 border-t border-border/40 pt-3">

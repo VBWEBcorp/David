@@ -10,11 +10,11 @@ import { useContent } from '@/hooks/use-content'
 const ease = [0.22, 1, 0.36, 1] as const
 
 const defaults = {
-  eyebrow: 'Notre histoire',
-  title: 'Une approche humaine, des résultats concrets',
-  paragraph1: 'Depuis nos débuts, nous croyons qu\'un bon site commence par une bonne écoute. Nous prenons le temps de comprendre votre métier, vos clients et vos objectifs avant de concevoir quoi que ce soit.',
-  paragraph2: 'Le résultat : des projets qui vous ressemblent, qui parlent à votre audience, et qui travaillent pour vous 24h/24.',
-  image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+  eyebrow: 'En savoir plus sur Göz Elec',
+  title: 'Transparence et expertise',
+  paragraph1: "Vous recherchez un électricien à Rennes pour vos travaux d'installation, de rénovation ou encore de remise aux normes ? Vous êtes au bon endroit ! Göz Elec, entreprise spécialisée dans le domaine de l'électricité générale, intervient auprès des particuliers dans le neuf comme dans l'ancien.",
+  paragraph2: "Avec plus de 20 ans d'expérience au compteur et une fine connaissance de la réglementation encadrant les installations électriques basse tension en France, nous apportons un regard expert à votre chantier. Conscients que le domaine peut sembler technique de l'extérieur, nous proposons à nos clients des conseils personnalisés et nous montrons transparents sur les tâches réalisées.",
+  image: '/images/goez-img-4454.png',
 }
 
 export function StorySection() {
@@ -36,7 +36,7 @@ export function StorySection() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/80 bg-muted/40 shadow-[var(--shadow-md)] ring-1 ring-foreground/5">
               <img
                 src={story.image}
-                alt="Équipe au travail"
+                alt="Göz Elec - Électricien à Rennes"
                 className="size-full object-cover"
                 loading="lazy"
                 width={800}
@@ -66,7 +66,7 @@ export function StorySection() {
             </p>
             <Button variant="outline" className="group" asChild>
               <Link href="/a-propos">
-                Lire plus
+                En savoir plus
                 <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
               </Link>
             </Button>

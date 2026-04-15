@@ -13,15 +13,15 @@ const ease = [0.22, 1, 0.36, 1] as const
 const INTERVAL = 5000
 
 const defaults = {
-  eyebrow: 'Bienvenue',
-  title: 'Votre partenaire pour réussir en ligne',
-  description: 'Nous accompagnons les entreprises avec des solutions sur mesure, pensées pour durer. Présence digitale, performance et clarté.',
-  button1: 'Prendre contact',
-  button2: 'Découvrir nos services',
+  eyebrow: 'Électricité générale en Bretagne',
+  title: "Göz Elec : Électricien à Rennes",
+  description: "Göz Elec réalise votre installation de VMC et tous vos travaux d'électricité générale : installation, rénovation et dépannage. Intervention rapide 24h/24 sur Rennes et sa périphérie.",
+  button1: 'Demander un devis gratuit',
+  button2: 'Appeler maintenant',
   images: [
-    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1920&q=80',
+    '/images/hero-bg.jpg',
+    '/images/goez-hero-1.jpg',
+    '/images/goez-hero-2.jpg',
   ],
 }
 
@@ -73,6 +73,9 @@ export function HeroSection() {
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-white/75 sm:text-xl">
             {hero.description}
           </p>
+          <p className="mx-auto mt-3 text-sm text-white/50">
+            Rénovation &middot; Neuf &middot; Dépannage &middot; VMC
+          </p>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
             <Button size="lg" className="group" asChild>
               <Link href="/contact">
@@ -86,10 +89,10 @@ export function HeroSection() {
               className="border-white/25 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 hover:text-white"
               asChild
             >
-              <Link href="/services">
+              <a href="tel:0769797744">
                 <Phone className="size-4" />
                 {hero.button2}
-              </Link>
+              </a>
             </Button>
           </div>
         </motion.div>

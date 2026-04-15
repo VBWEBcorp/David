@@ -5,14 +5,16 @@ import { siteConfig } from '@/lib/seo'
 
 const navLinks = [
   { label: 'Accueil', to: '/' },
-  { label: 'À propos', to: '/a-propos' },
+  { label: 'A propos', to: '/a-propos' },
   { label: 'Services', to: '/services' },
+  { label: 'Galerie', to: '/gallery' },
+  { label: 'Blog', to: '/blog' },
   { label: 'Contact', to: '/contact' },
 ]
 
 const legalLinks = [
-  { label: 'Mentions légales', to: '/mentions-legales' },
-  { label: 'Confidentialité', to: '/politique-de-confidentialite' },
+  { label: 'Mentions legales', to: '/mentions-legales' },
+  { label: 'Confidentialite', to: '/politique-de-confidentialite' },
   { label: 'CGU', to: '/conditions-generales' },
   { label: 'Cookies', to: '/politique-cookies' },
 ]
@@ -35,11 +37,8 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand */}
           <div className="space-y-5">
-            <div className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight">
-              <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-[18px]"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-            </span>
-              <span className="text-white">{siteConfig.name}</span>
+            <div className="flex items-center gap-3">
+              <img src="/logo-gozelec.svg" alt="Goz Elec" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="max-w-xs text-[13px] leading-relaxed text-zinc-400">
               {siteConfig.description}
@@ -96,9 +95,9 @@ export function Footer() {
           </nav>
 
           {/* Legal */}
-          <nav aria-label="Légal">
+          <nav aria-label="Legal">
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
-              Légal
+              Legal
             </h3>
             <ul className="mt-5 space-y-3">
               {legalLinks.map((l) => (
@@ -122,7 +121,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-6 flex items-center justify-center sm:justify-start">
           <p className="text-xs text-zinc-500">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés
+            &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits reserves
           </p>
         </div>
       </div>

@@ -8,17 +8,22 @@ import { Button } from '@/components/ui/button'
 import { useContent } from '@/hooks/use-content'
 
 const defaultImages = [
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=720&q=80',
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=720&q=80',
-  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=720&q=80',
-  'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=720&q=80',
-  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=720&q=80',
-  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=720&q=80',
+  '/images/goez-hero-1.jpg',
+  '/images/goez-hero-2.jpg',
+  '/images/goez-img-4454.png',
+  '/images/goez-12.jpg',
+  '/images/goez-11.jpg',
+  '/images/goez-10.jpg',
+  '/images/goez-9.jpg',
+  '/images/goez-8.jpg',
+  '/images/goez-7.jpg',
+  '/images/goez-6.jpg',
+  '/images/goez-4.jpg',
 ]
 
 const defaults = {
-  eyebrow: 'Galerie',
-  title: 'En coulisses',
+  eyebrow: 'Réalisations',
+  title: 'Le travail de Göz Elec en images',
   images: defaultImages,
 }
 

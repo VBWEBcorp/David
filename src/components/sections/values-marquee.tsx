@@ -1,23 +1,23 @@
 import {
-  Eye,
+  Clock,
   Handshake,
   HeartHandshake,
-  Lightbulb,
-  Rocket,
   Shield,
   Sparkles,
   Target,
+  ThumbsUp,
+  Zap,
   type LucideIcon,
 } from 'lucide-react'
 
 const values: { icon: LucideIcon; label: string }[] = [
-  { icon: Sparkles, label: 'Excellence' },
+  { icon: Zap, label: 'Reactivite' },
+  { icon: Shield, label: 'Securite' },
   { icon: Handshake, label: 'Confiance' },
-  { icon: Lightbulb, label: 'Innovation' },
-  { icon: Eye, label: 'Transparence' },
-  { icon: Rocket, label: 'Performance' },
-  { icon: HeartHandshake, label: 'Proximité' },
-  { icon: Shield, label: 'Fiabilité' },
+  { icon: Clock, label: 'Disponible 24/24' },
+  { icon: Sparkles, label: 'Qualite' },
+  { icon: HeartHandshake, label: 'Proximite' },
+  { icon: ThumbsUp, label: 'Garantie decennale' },
   { icon: Target, label: 'Sur mesure' },
 ]
 
