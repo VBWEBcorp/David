@@ -1,9 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { SectionTitle } from '@/components/ui/section-title'
-
-const ease = [0.22, 1, 0.36, 1] as const
 
 const partners = [
   { name: 'Partenaire 1', logo: '/images/partner-01.jpg' },
@@ -19,32 +16,43 @@ const partners = [
 export function PartnersSection() {
   return (
     <section className="border-b border-border/60">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-6xl px-4 pt-16 pb-4 sm:px-6 lg:px-8 lg:pt-20 lg:pb-6">
         <SectionTitle
           eyebrow="Nos partenaires"
           title="Les partenaires de Göz Elec"
         />
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.55, ease }}
-          className="mt-12 flex flex-wrap items-center justify-center gap-10 sm:gap-16"
-        >
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="flex items-center justify-center grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
-            >
+      </div>
+
+      {/* Marquee carousel */}
+      <div className="relative mt-8 overflow-hidden pb-16 lg:pb-20">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent sm:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent sm:w-32" />
+
+        <div className="group flex">
+          <div className="flex shrink-0 items-center gap-16 animate-marquee-bar group-hover:[animation-play-state:paused]">
+            {partners.map((p, i) => (
               <img
-                src={partner.logo}
-                alt={partner.name}
-                className="h-10 w-auto object-contain sm:h-12"
+                key={`a-${i}`}
+                src={p.logo}
+                alt={p.name}
+                className="h-10 w-auto object-contain grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100 sm:h-14"
                 loading="lazy"
               />
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+          <div aria-hidden className="flex shrink-0 items-center gap-16 animate-marquee-bar group-hover:[animation-play-state:paused]">
+            {partners.map((p, i) => (
+              <img
+                key={`b-${i}`}
+                src={p.logo}
+                alt={p.name}
+                className="h-10 w-auto object-contain grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100 sm:h-14"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
